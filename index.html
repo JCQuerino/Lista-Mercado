@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado </title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        header{
+            background-color: purple;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+        header h1{
+            font-weight: normal;
+        }
+        .container{
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+        .wrapper-cadastro{
+            margin-top: 30px;
+            display: flex;
+        }
+        .wrapper-cadastro input[type=text]{
+            flex: 1;
+            height: 35px;
+            padding-left: 8px;
+        }
+        .wrapper-cadastro input:not(:last-child){
+            margin-right: 15px;
+        }
+        .wrapper-cadastro input[type=submit]{
+            padding: 8px 16px;
+            background-color: purple;
+            color: white;
+            border: 1px solid;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .lista-produtos-wrapper{
+            margin-top: 20px;
+        }
+        .lista-produtos-single{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid;
+            padding: 10px 0;
+        }
+        .soma{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .lista-produtos h3{
+            font-weight: normal;
+        }
+        .somaAndLimparWrapper{
+            display: flex;
+            justify-content: space-between;
+            padding: 14px;
+            background-color: purple;
+            color: white;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        .somaAndLimparWrapper h3{
+            font-weight: normal;
+        }
+        .somaAndLimparWrapper button{
+            background-color: white;
+            padding: 5px 13px;
+            color: purple;
+            border: 1px solid;
+            border-radius: 3px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+    <header>
+        <h2>App Lista de Supermercado</h2>
+    </header>
+    <div class="lista-cadastro">
+        <div class="container">
+            <div class="wrapper-cadastro">
+                <input type="text" placeholder="Insira o nome do produto" name="nomeProduto">
+                <input type="text" placeholder="Insira o valor do produto" name="valorProduto">
+                <input type="submit" name="acao" value="Cadastrar">
+            </div>
+        </div>
+    </div>
+    <div class="lista-produtos-wrapper">
+        <div class="container">
+            <div class="lista-produtos">
+                
+            </div>
+        </div>
+    </div>
+    <div class="somaAndLimpar">
+        <div class="container">
+            <div class="somaAndLimparWrapper">
+                <h3>Total: R$ 0</h3>
+                <button>Limpar Carrinho</button>
+            </div>
+        </div>
+    </div>
+    <script src="supermercado.js"></script>
+</body>
+</html>
